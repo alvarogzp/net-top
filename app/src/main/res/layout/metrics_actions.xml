@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/metrics_actions_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:showIn="@layout/activity_metrics">
+
+    <Button
+        android:id="@+id/update_metrics_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_metrics" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/auto_refresh_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_refresh_label" />
+
+        <LinearLayout
+            android:id="@+id/update_interval_root"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/separation_between_auto_refresh_checkbox_and_update_interval"
+            android:layout_marginLeft="@dimen/separation_between_auto_refresh_checkbox_and_update_interval"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/metrics_actions_text_view"
+                android:text="@string/auto_refresh_every_label" />
+
+            <EditText
+                android:id="@+id/update_interval_seconds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/update_interval_width_minimum"
+                android:maxWidth="@dimen/update_interval_width_maximum"
+                android:gravity="center_horizontal"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionDone" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/metrics_actions_text_view"
+                android:text="@string/auto_refresh_seconds_label" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/filter_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_only_transferring_data_label" />
+
+    <CheckBox
+        android:id="@+id/display_separate_metric_values_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/display_separate_metric_values_label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/separation_between_display_separate_metric_values_checkbox_and_metric_mapper_type_label"
+        style="@style/metrics_actions_text_view"
+        android:text="@string/metric_mapper_type_label" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/metric_mapper_type_per_second_radiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/metric_mapper_type_per_second" />
+
+        <RadioButton
+            android:id="@+id/metric_mapper_type_cumulative_radiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/metric_mapper_type_cumulative" />
+
+        <RadioButton
+            android:id="@+id/metric_mapper_type_raw_radiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/metric_mapper_type_raw" />
+
+    </RadioGroup>
+
+</LinearLayout>

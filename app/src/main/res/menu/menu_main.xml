@@ -1,0 +1,18 @@
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".metric.presentation.view.android.activity.MetricsActivity">
+
+    <item
+        android:id="@+id/menu_item_reset_actions"
+        android:title="@string/menu_reset_actions_label"
+        app:showAsAction="never" />
+
+    <!--<item
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />-->
+
+</menu>

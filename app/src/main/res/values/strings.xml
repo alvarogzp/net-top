@@ -1,0 +1,65 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">NetTop dev</string>
+
+    <!-- Layout referenced strings -->
+
+    <string name="action_settings">Settings</string>
+
+    <string name="update_metrics">Refresh</string>
+
+    <string name="auto_refresh_label">Auto-refresh</string>
+    <string name="auto_refresh_every_label">every</string>
+    <string name="auto_refresh_seconds_label">seconds</string>
+
+    <string name="display_only_transferring_data_label">Only display apps transferring data</string>
+    <string name="display_separate_metric_values_label">Display separate download/upload values</string>
+
+    <string name="metric_mapper_type_label">Display values:</string>
+    <string name="metric_mapper_type_per_second">Per second</string>
+    <string name="metric_mapper_type_cumulative">Accumulated</string>
+    <string name="metric_mapper_type_raw">Total</string>
+
+    <string name="menu_reset_actions_label">Reset settings</string>
+
+    <!-- Code referenced strings -->
+
+    <string name="total_metric_label">Total</string>
+
+    <string name="unit_symbol_bit">b</string>
+    <string name="unit_symbol_byte">B</string>
+    <string name="unit_symbol_unknown">\?</string>
+
+    <string name="unit_modifier_symbol_none" />
+    <string name="unit_modifier_symbol_per_second">/s</string>
+    <string name="unit_modifier_symbol_unknown">\?</string>
+
+    <string name="unit_prefix_symbol_none" />
+    <string name="unit_prefix_symbol_kibi">Ki</string>
+    <string name="unit_prefix_symbol_mebi">Mi</string>
+    <string name="unit_prefix_symbol_gibi">Gi</string>
+    <string name="unit_prefix_symbol_tebi">Ti</string>
+    <string name="unit_prefix_symbol_pebi">Pi</string>
+    <string name="unit_prefix_symbol_exbi">Ei</string>
+    <string name="unit_prefix_symbol_unknown">\?</string>
+
+    <string name="special_value_unsupported">(unsupported)</string>
+    <string name="special_value_need_more_data" tools:ignore="TypographyEllipsis">...</string>
+    <string name="special_value_unknown">err (%s)</string>
+    <string name="special_value_unit_empty" />
+
+    <string name="direction_rx">↓</string>
+    <string name="direction_tx">↑</string>
+    <string name="direction_rx_tx" />
+
+    <string name="error_message_update_interval_invalid_number">Invalid number</string>
+    <string name="error_message_update_interval_negative_number">Negative numbers not allowed</string>
+    <string name="warning_message_update_interval_too_low_number">Application may hang with a very low refresh interval</string>
+
+    <string name="error_template"><b>ERROR</b> {message}</string>
+    <string name="warning_template"><b>WARNING</b> {message}</string>
+    <string name="info_template"><b>INFO</b> {message}</string>
+
+    <string name="metric_mapper_type_per_second_description">Displaying per second average of network traffic since last refresh</string>
+    <string name="metric_mapper_type_cumulative_description">Displaying network traffic since last refresh</string>
+    <string name="metric_mapper_type_raw_description">Displaying network traffic since device boot</string>
+</resources>

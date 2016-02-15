@@ -1,0 +1,13 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="separation_between_metric_value_and_unit">5dp</dimen>
+    <dimen name="separation_between_auto_refresh_checkbox_and_update_interval">5dp</dimen>
+    <dimen name="separation_between_display_separate_metric_values_checkbox_and_metric_mapper_type_label">5dp</dimen>
+    <dimen name="separation_between_metric_mapper_type_label_and_metric_mapper_types_in_landscape_orientation">10dp</dimen>
+
+    <dimen name="update_interval_width_minimum">75dp</dimen>
+    <dimen name="update_interval_width_maximum">100dp</dimen>
+</resources>
