@@ -1,0 +1,44 @@
+#!/bin/bash
+
+print_diff_header()
+{
+	local file="${1:?Missing file name}"
+
+	echo_stderr "Modifying $file"
+}
+
+print_diff_lines()
+{
+	local file="${1:?Missing file name}"
+	local match="${2:?Missing match pattern}"
+	local direction="${3:?Missing diff direction}"
+
+	while IFS= read -r line
+	do
+		echo_stderr " ${direction}${line}"
+	done < <(sed -n "/$match/p" "$file")
+}
+
+print_diff_end()
+{
+	echo_stderr "End"
+}
+
+replace_raw()
+{
+	local file="${1:?Missing file name to replace}"
+	local match="${2:?Missing match pattern}"
+	local replace="${3:?Missing replace pattern}"
+	local flags="${4}" # Optional
+	local display_pattern="${5:-$match}" # Optional, defaults to $match
+
+	print_diff_header "$file"
+	print_diff_lines "$file" "$display_pattern" "-"
+
+	sed --in-place "s/$match/$replace/$flags" "$file"
+
+	print_diff_lines "$file" "$display_pattern" "+"
+	print_diff_end
+}
+
+replace_raw "$@"

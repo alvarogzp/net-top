@@ -1,0 +1,15 @@
+#!/bin/sh
+
+BASE_DIR="$(dirname "$0")"
+LIB_DIR="$BASE_DIR/lib"
+. "$LIB_DIR/importer"
+
+import_commands
+import_config "dirs"
+
+new_version_name="${1:?Missing version name}"
+new_version_code="${2:?Missing version code}"
+
+set_prop "$BUILD_APP_FILE" 'versionName' "\"$new_version_name\""
+
+set_prop "$BUILD_APP_FILE" 'versionCode' "$new_version_code"

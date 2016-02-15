@@ -1,0 +1,29 @@
+#!/bin/sh
+
+BASE_DIR="$(dirname "$0")"
+LIB_DIR="$BASE_DIR/.."
+. "$LIB_DIR/importer"
+
+import_config "regex"
+
+set_string()
+{
+	local file="${1:?Missing file name}"
+	local string_name="${2:?Missing string name}"
+	if [ $# -gt 3 ]
+	then
+		local old_value="$3"
+		local new_value="$4"
+	else
+		local old_value="$REGEX_ANY_OPTIONAL"
+		local new_value="${3:?Missing value to set}"
+	fi
+
+	local match_start="^${REGEX_SPACES_OPTIONAL}<string name=\"${string_name}\">"
+	local match_end="<\/string>\$"
+	local flags="" # add "g" if needed (see sed(1))
+
+	replace "$file" "$match_start" "$match_end" "$old_value" "$new_value" "$flags"
+}
+
+set_string "$@"

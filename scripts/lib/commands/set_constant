@@ -1,0 +1,31 @@
+#!/bin/bash
+
+BASE_DIR="$(dirname "$0")"
+LIB_DIR="$BASE_DIR/.."
+. "$LIB_DIR/importer"
+
+import_config "regex"
+
+set_constant()
+{
+	local src_root_dir="${1:?Missing source root dir}"
+	local class_name="${2:?Missing class name}"
+	local constant_name="${3:?Missing constant name}"
+	if [ $# -gt 4 ]
+	then
+		local old_value="$4"
+		local new_value="$5"
+	else
+		local old_value="$REGEX_ANY_OPTIONAL"
+		local new_value="${4:?Missing value to set}"
+	fi
+
+	local file="${src_root_dir}/${class_name//./\/}.java"
+	local match_start="^${REGEX_SPACES_OPTIONAL}${constant_name} = "
+	local match_end=";\$"
+	local flags="" # add "g" if needed (see sed(1))
+
+	replace "$file" "$match_start" "$match_end" "$old_value" "$new_value" "$flags"
+}
+
+set_constant "$@"

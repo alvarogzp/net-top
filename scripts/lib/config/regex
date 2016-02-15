@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Common regular expresions
+
+REGEX_SPACE="[ \t]"
+REGEX_SPACES_OPTIONAL="[ \t]*"
+REGEX_SPACES_MANDATORY="[ \t]\+"
+
+REGEX_ANY_OPTIONAL=".*"

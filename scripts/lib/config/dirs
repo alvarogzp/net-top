@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Defines some common directories
+#
+# LIB_DIR must already be present, as it is used as the base to set
+# all the directories.
+
+# Project root dir
+ROOT_DIR="$LIB_DIR/../.."
+
+APP_DIR="$ROOT_DIR/app"
+APP_SRC_MAIN="$APP_DIR/src/main"
+RES_DIR="$APP_SRC_MAIN/res"
+
+# App build gradle file
+BUILD_APP_FILE="$APP_DIR/build.gradle"
+
+# String resource file
+STRINGS_FILE="$RES_DIR/values/strings.xml"
+
+JAVA_SRC_ROOT="$APP_SRC_MAIN/java"

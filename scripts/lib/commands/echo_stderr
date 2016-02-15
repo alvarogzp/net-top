@@ -1,0 +1,8 @@
+#!/bin/sh
+
+echo_stderr()
+{
+	echo "$@" >&2
+}
+
+echo_stderr "$@"
