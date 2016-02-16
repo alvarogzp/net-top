@@ -1,5 +1,5 @@
-# net-top
-Android app for measuring network data transfer speed in real time
+# NetTop
+Android application for viewing detailed info about device network data transfer in real time.
 
 # License
 
