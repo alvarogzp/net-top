@@ -1,6 +1,11 @@
 # NetTop
 Android application for viewing detailed info about device network data transfer in real time.
 
+# Developed by
+- Alvaro Gutierrez Perez
+  - alvarogzp@gmail.com
+  - https://linkedin.com/in/alvarogzp
+
 # License
 
     Copyright (C) 2016  Alvaro Gutierrez
