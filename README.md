@@ -3,6 +3,15 @@ Android application for viewing detailed info about device network data transfer
 
 You can get it on Google Play on the following link: https://play.google.com/store/apps/details?id=org.alvarogp.nettop
 
+# Source
+NetTop code follows the [Clean Architecture](https://blog.8thlight.com/uncle-bob/2012/08/13/the-clean-architecture.html) guidelines described by Robert C. Martin.
+
+### Libraries used
+- **[RxJava](https://github.com/ReactiveX/RxJava)**, the [ReactiveX](http://reactivex.io/) implementation for Java.
+- **[Dagger 2](https://google.github.io/dagger/)** to perform dependency injection without using reflection.
+- **[Retrolambda](https://github.com/orfjackal/retrolambda)** so lambdas can be used on the code.
+- **[ButterKnife](https://jakewharton.github.io/butterknife/)** which simplifies Android view handling.
+
 # Developed by
 - Alvaro Gutierrez Perez
   - alvarogzp@gmail.com
