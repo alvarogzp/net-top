@@ -1,6 +1,8 @@
 # NetTop
 Android application for viewing detailed info about device network data transfer in real time.
 
+You can get it on Google Play on the following link: https://play.google.com/store/apps/details?id=org.alvarogp.nettop
+
 # Developed by
 - Alvaro Gutierrez Perez
   - alvarogzp@gmail.com
