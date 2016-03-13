@@ -9,8 +9,8 @@ NetTop code follows the [Clean Architecture](https://blog.8thlight.com/uncle-bob
 ### Libraries used
 - **[RxJava](https://github.com/ReactiveX/RxJava)**, the [ReactiveX](http://reactivex.io/) implementation for Java.
 - **[Dagger 2](https://google.github.io/dagger/)** to perform dependency injection without using reflection.
-- **[Retrolambda](https://github.com/orfjackal/retrolambda)** so lambdas can be used on the code.
-- **[ButterKnife](https://jakewharton.github.io/butterknife/)** which simplifies Android view handling.
+- **[Retrolambda](https://github.com/orfjackal/retrolambda)** so that Java 8 *lambdas* and *method references* can be used on the code.
+- **[ButterKnife](https://jakewharton.github.io/butterknife/)** which provides field and method binding for views.
 
 # Developed by
 - Alvaro Gutierrez Perez
